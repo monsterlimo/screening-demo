@@ -1,5 +1,3 @@
-"use strict";
-
 accessibleAutocomplete.enhanceSelectElement({
   showNoOptionsFound: true,
   defaultValue: '',

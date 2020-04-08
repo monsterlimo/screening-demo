@@ -1,5 +1,3 @@
-"use strict";
-
 $(document).ready(function () {
   Mousetrap.bind('?', function () {
     alert("Help Section - Keyboard Commands");

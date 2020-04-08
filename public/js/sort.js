@@ -1,5 +1,3 @@
-"use strict";
-
 $(document).ready(function () {
   function compare(idx) {
     return function (a, b) {

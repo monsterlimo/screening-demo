@@ -1,5 +1,3 @@
-"use strict";
-
 // this is just lazy beyond compare...even to my standards
 $(document).ready(function () {
   Mousetrap.bind('?', function () {

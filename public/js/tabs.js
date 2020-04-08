@@ -1,5 +1,3 @@
-"use strict";
-
 $('nav.nhsuk-tabs li a').click(function () {
   $('nav.nhsuk-tabs li a').removeClass('selected');
   $(this).addClass('selected');

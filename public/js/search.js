@@ -1,9 +1,5 @@
-"use strict";
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
 (function webpackUniversalModuleDefinition(e, t) {
-  "object" == (typeof exports === "undefined" ? "undefined" : _typeof(exports)) && "object" == (typeof module === "undefined" ? "undefined" : _typeof(module)) ? module.exports = t() : "function" == typeof define && define.amd ? define([], t) : "object" == (typeof exports === "undefined" ? "undefined" : _typeof(exports)) ? exports["accessibleAutocomplete"] = t() : e["accessibleAutocomplete"] = t();
+  "object" == typeof exports && "object" == typeof module ? module.exports = t() : "function" == typeof define && define.amd ? define([], t) : "object" == typeof exports ? exports["accessibleAutocomplete"] = t() : e["accessibleAutocomplete"] = t();
 })(window, function () {
   return function (n) {
     var r = {};
@@ -31,16 +27,14 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       });
     }, o.t = function (t, e) {
       if (1 & e && (t = o(t)), 8 & e) return t;
-      if (4 & e && "object" == _typeof(t) && t && t.__esModule) return t;
+      if (4 & e && "object" == typeof t && t && t.__esModule) return t;
       var n = Object.create(null);
       if (o.r(n), Object.defineProperty(n, "default", {
         enumerable: !0,
         value: t
-      }), 2 & e && "string" != typeof t) for (var r in t) {
-        o.d(n, r, function (e) {
-          return t[e];
-        }.bind(null, r));
-      }
+      }), 2 & e && "string" != typeof t) for (var r in t) o.d(n, r, function (e) {
+        return t[e];
+      }.bind(null, r));
       return n;
     }, o.n = function (e) {
       var t = e && e.__esModule ? function () {
@@ -59,7 +53,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         _ = n(16),
         b = n(18),
         g = "prototype",
-        x = function x(e, t, n) {
+        x = function (e, t, n) {
       var r,
           o,
           i,
@@ -73,9 +67,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           d = a ? v : v[t] || (v[t] = {}),
           h = d[g] || (d[g] = {});
 
-      for (r in a && (n = t), n) {
-        i = ((o = !l && f && f[r] !== undefined) ? f : n)[r], u = p && o ? b(i, m) : c && "function" == typeof i ? b(Function.call, i) : i, f && _(f, r, i, e & x.U), d[r] != i && y(d, r, u), c && h[r] != i && (h[r] = i);
-      }
+      for (r in a && (n = t), n) i = ((o = !l && f && f[r] !== undefined) ? f : n)[r], u = p && o ? b(i, m) : c && "function" == typeof i ? b(Function.call, i) : i, f && _(f, r, i, e & x.U), d[r] != i && y(d, r, u), c && h[r] != i && (h[r] = i);
     };
 
     m.core = v, x.F = 1, x.G = 2, x.S = 4, x.P = 8, x.B = 16, x.W = 32, x.U = 64, x.R = 128, e.exports = x;
@@ -84,12 +76,12 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     "number" == typeof __g && (__g = n);
   }, function (e, t) {
     e.exports = function (e) {
-      return "object" == _typeof(e) ? null !== e : "function" == typeof e;
+      return "object" == typeof e ? null !== e : "function" == typeof e;
     };
   }, function (e, t, n) {
     e.exports = !n(4)(function () {
       return 7 != Object.defineProperty({}, "a", {
-        get: function get() {
+        get: function () {
           return 7;
         }
       }).a;
@@ -133,24 +125,16 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           i,
           u = c;
 
-      for (i = arguments.length; 2 < i--;) {
-        s.push(arguments[i]);
-      }
+      for (i = arguments.length; 2 < i--;) s.push(arguments[i]);
 
-      for (t && null != t.children && (s.length || s.push(t.children), delete t.children); s.length;) {
-        if ((r = s.pop()) && r.pop !== undefined) for (i = r.length; i--;) {
-          s.push(r[i]);
-        } else "boolean" == typeof r && (r = null), (o = "function" != typeof e) && (null == r ? r = "" : "number" == typeof r ? r = String(r) : "string" != typeof r && (o = !1)), o && n ? u[u.length - 1] += r : u === c ? u = [r] : u.push(r), n = o;
-      }
+      for (t && null != t.children && (s.length || s.push(t.children), delete t.children); s.length;) if ((r = s.pop()) && r.pop !== undefined) for (i = r.length; i--;) s.push(r[i]);else "boolean" == typeof r && (r = null), (o = "function" != typeof e) && (null == r ? r = "" : "number" == typeof r ? r = String(r) : "string" != typeof r && (o = !1)), o && n ? u[u.length - 1] += r : u === c ? u = [r] : u.push(r), n = o;
 
       var l = new a();
       return l.nodeName = e, l.children = u, l.attributes = null == t ? undefined : t, l.key = null == t ? undefined : t.key, E.vnode !== undefined && E.vnode(l), l;
     }
 
     function N(e, t) {
-      for (var n in t) {
-        e[n] = t[n];
-      }
+      for (var n in t) e[n] = t[n];
 
       return e;
     }
@@ -172,9 +156,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       var e,
           t = u;
 
-      for (u = []; e = t.pop();) {
-        e._dirty && V(e);
-      }
+      for (u = []; e = t.pop();) e._dirty && V(e);
     }
 
     function k(e, t) {
@@ -185,9 +167,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       var t = N({}, e.attributes);
       t.children = e.children;
       var n = e.nodeName.defaultProps;
-      if (n !== undefined) for (var r in n) {
-        t[r] === undefined && (t[r] = n[r]);
-      }
+      if (n !== undefined) for (var r in n) t[r] === undefined && (t[r] = n[r]);
       return t;
     }
 
@@ -199,14 +179,10 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     function v(e, t, n, r, o) {
       if ("className" === t && (t = "class"), "key" === t) ;else if ("ref" === t) n && n(null), r && r(e);else if ("class" !== t || o) {
         if ("style" === t) {
-          if (r && "string" != typeof r && "string" != typeof n || (e.style.cssText = r || ""), r && "object" == _typeof(r)) {
-            if ("string" != typeof n) for (var i in n) {
-              i in r || (e.style[i] = "");
-            }
+          if (r && "string" != typeof r && "string" != typeof n || (e.style.cssText = r || ""), r && "object" == typeof r) {
+            if ("string" != typeof n) for (var i in n) i in r || (e.style[i] = "");
 
-            for (var i in r) {
-              e.style[i] = "number" == typeof r[i] && !1 === p.test(i) ? r[i] + "px" : r[i];
-            }
+            for (var i in r) e.style[i] = "number" == typeof r[i] && !1 === p.test(i) ? r[i] + "px" : r[i];
           }
         } else if ("dangerouslySetInnerHTML" === t) r && (e.innerHTML = r.__html || "");else if ("o" == t[0] && "n" == t[1]) {
           var u = t !== (t = t.replace(/Capture$/, ""));
@@ -234,9 +210,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         T = !1;
 
     function L() {
-      for (var e; e = M.pop();) {
-        E.afterMount && E.afterMount(e), e.componentDidMount && e.componentDidMount();
-      }
+      for (var e; e = M.pop();) E.afterMount && E.afterMount(e), e.componentDidMount && e.componentDidMount();
     }
 
     function B(e, t, n, r, o, i) {
@@ -258,9 +232,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             a = l,
             s = I(t);
 
-        for (; o && !a && (o = o._parentComponent);) {
-          a = o.constructor === t.nodeName;
-        }
+        for (; o && !a && (o = o._parentComponent);) a = o.constructor === t.nodeName;
 
         o && a && (!r || o._component) ? (U(o, s, 3, n, r), e = o.base) : (i && !l && (q(i), e = u = null), o = R(t.nodeName, s, n), e && !o.nextBase && (o.nextBase = e, u = null), U(o, s, 1, n, r), e = o.base, u && e !== u && (u._component = null, D(u, !1)));
         return e;
@@ -270,9 +242,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         var n = t ? document.createElementNS("http://www.w3.org/2000/svg", e) : document.createElement(e);
         return n.normalizedNodeName = e, n;
       }(l, A), e)) {
-        for (; e.firstChild;) {
-          i.appendChild(e.firstChild);
-        }
+        for (; e.firstChild;) i.appendChild(e.firstChild);
 
         e.parentNode && e.parentNode.replaceChild(i, e), D(e, !0);
       }
@@ -284,9 +254,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       if (null == s) {
         s = i["__preactattr_"] = {};
 
-        for (var p = i.attributes, f = p.length; f--;) {
-          s[p[f].name] = p[f].value;
-        }
+        for (var p = i.attributes, f = p.length; f--;) s[p[f].name] = p[f].value;
       }
 
       return !T && c && 1 === c.length && "string" == typeof c[0] && null != a && a.splitText !== undefined && null == a.nextSibling ? a.nodeValue != c[0] && (a.nodeValue = c[0]) : (c && c.length || null != a) && function S(e, t, n, r, o) {
@@ -312,32 +280,22 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         if (0 !== y) for (var _ = 0; _ < y; _++) {
           a = t[_], s = null;
           var x = a.key;
-          if (null != x) d && f[x] !== undefined && (s = f[x], f[x] = undefined, d--);else if (h < v) for (i = h; i < v; i++) {
-            if (p[i] !== undefined && (w = u = p[i], C = o, "string" == typeof (O = a) || "number" == typeof O ? w.splitText !== undefined : "string" == typeof O.nodeName ? !w._componentConstructor && k(w, O.nodeName) : C || w._componentConstructor === O.nodeName)) {
-              s = u, p[i] = undefined, i === v - 1 && v--, i === h && h++;
-              break;
-            }
+          if (null != x) d && f[x] !== undefined && (s = f[x], f[x] = undefined, d--);else if (h < v) for (i = h; i < v; i++) if (p[i] !== undefined && (w = u = p[i], C = o, "string" == typeof (O = a) || "number" == typeof O ? w.splitText !== undefined : "string" == typeof O.nodeName ? !w._componentConstructor && k(w, O.nodeName) : C || w._componentConstructor === O.nodeName)) {
+            s = u, p[i] = undefined, i === v - 1 && v--, i === h && h++;
+            break;
           }
           s = F(s, a, n, r), l = c[_], s && s !== e && s !== l && (null == l ? e.appendChild(s) : s === l.nextSibling ? P(l) : e.insertBefore(s, l));
         }
         var w, O, C;
-        if (d) for (var _ in f) {
-          f[_] !== undefined && D(f[_], !1);
-        }
+        if (d) for (var _ in f) f[_] !== undefined && D(f[_], !1);
 
-        for (; h <= v;) {
-          (s = p[v--]) !== undefined && D(s, !1);
-        }
+        for (; h <= v;) (s = p[v--]) !== undefined && D(s, !1);
       }(i, c, n, r, T || null != s.dangerouslySetInnerHTML), function m(e, t, n) {
         var r;
 
-        for (r in n) {
-          t && null != t[r] || null == n[r] || v(e, r, n[r], n[r] = undefined, A);
-        }
+        for (r in n) t && null != t[r] || null == n[r] || v(e, r, n[r], n[r] = undefined, A);
 
-        for (r in t) {
-          "children" === r || "innerHTML" === r || r in n && t[r] === ("value" === r || "checked" === r ? e[r] : n[r]) || v(e, r, n[r], n[r] = t[r], A);
-        }
+        for (r in t) "children" === r || "innerHTML" === r || r in n && t[r] === ("value" === r || "checked" === r ? e[r] : n[r]) || v(e, r, n[r], n[r] = t[r], A);
       }(i, t.attributes, s), A = u, i;
     }
 
@@ -359,9 +317,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       var r,
           o = m.length;
 
-      for (e.prototype && e.prototype.render ? (r = new e(t, n), _.call(r, t, n)) : ((r = new _(t, n)).constructor = e, r.render = y); o--;) {
-        if (m[o].constructor === e) return r.nextBase = m[o].nextBase, m.splice(o, 1), r;
-      }
+      for (e.prototype && e.prototype.render ? (r = new e(t, n), _.call(r, t, n)) : ((r = new _(t, n)).constructor = e, r.render = y); o--;) if (m[o].constructor === e) return r.nextBase = m[o].nextBase, m.splice(o, 1), r;
 
       return r;
     }
@@ -413,17 +369,13 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           }
 
           if (b && q(b), (e.base = g) && !r) {
-            for (var C = e, S = e; S = S._parentComponent;) {
-              (C = S).base = g;
-            }
+            for (var C = e, S = e; S = S._parentComponent;) (C = S).base = g;
 
             g._component = C, g._componentConstructor = C.constructor;
           }
         }
 
-        for (!d || n ? M.unshift(e) : y || (e.componentDidUpdate && e.componentDidUpdate(c, p, _), E.afterUpdate && E.afterUpdate(e)); e._renderCallbacks.length;) {
-          e._renderCallbacks.pop().call(e);
-        }
+        for (!d || n ? M.unshift(e) : y || (e.componentDidUpdate && e.componentDidUpdate(c, p, _), E.afterUpdate && E.afterUpdate(e)); e._renderCallbacks.length;) e._renderCallbacks.pop().call(e);
 
         j || r || L();
       }
@@ -446,10 +398,10 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     }
 
     N(_.prototype, {
-      setState: function setState(e, t) {
+      setState: function (e, t) {
         this.prevState || (this.prevState = this.state), this.state = N(N({}, this.state), "function" == typeof e ? e(this.state, this.props) : e), t && this._renderCallbacks.push(t), l(this);
       },
-      forceUpdate: function forceUpdate(e) {
+      forceUpdate: function (e) {
         e && this._renderCallbacks.push(e), V(this, 2);
       },
       render: function b() {}
@@ -623,12 +575,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             u = c(n, i);
 
         if (l && t != t) {
-          for (; u < i;) {
-            if ((r = o[u++]) != r) return !0;
-          }
-        } else for (; u < i; u++) {
-          if ((l || u in o) && o[u] === t) return l || u || 0;
-        }
+          for (; u < i;) if ((r = o[u++]) != r) return !0;
+        } else for (; u < i; u++) if ((l || u in o) && o[u] === t) return l || u || 0;
 
         return !l && -1;
       };
@@ -680,7 +628,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         i = /^\s*function ([^ (]*)/;
     "name" in o || n(3) && r(o, "name", {
       configurable: !0,
-      get: function get() {
+      get: function () {
         try {
           return ("" + this).match(i)[1];
         } catch (e) {
@@ -694,7 +642,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     var r = n(0),
         o = n(32)(1);
     r(r.P + r.F * !n(13)([].map, !0), "Array", {
-      map: function map(e) {
+      map: function (e) {
         return o(this, e, arguments[1]);
       }
     });
@@ -715,21 +663,19 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           _ = e || r;
 
       return function (e, t, n) {
-        for (var r, o, i = x(e), u = g(i), l = b(t, n, 3), a = w(u.length), s = 0, c = f ? _(e, a) : d ? _(e, 0) : undefined; s < a; s++) {
-          if ((y || s in u) && (o = l(r = u[s], s, i), p)) if (f) c[s] = o;else if (o) switch (p) {
-            case 3:
-              return !0;
+        for (var r, o, i = x(e), u = g(i), l = b(t, n, 3), a = w(u.length), s = 0, c = f ? _(e, a) : d ? _(e, 0) : undefined; s < a; s++) if ((y || s in u) && (o = l(r = u[s], s, i), p)) if (f) c[s] = o;else if (o) switch (p) {
+          case 3:
+            return !0;
 
-            case 5:
-              return r;
+          case 5:
+            return r;
 
-            case 6:
-              return s;
+          case 6:
+            return s;
 
-            case 2:
-              c.push(r);
-          } else if (m) return !1;
-        }
+          case 2:
+            c.push(r);
+        } else if (m) return !1;
 
         return v ? -1 : h || m ? m : c;
       };
@@ -756,7 +702,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         i = [].indexOf,
         u = !!i && 1 / [1].indexOf(1, -0) < 0;
     r(r.P + r.F * (u || !n(13)(i)), "Array", {
-      indexOf: function indexOf(e) {
+      indexOf: function (e) {
         return u ? i.apply(this, arguments) || 0 : o(this, e, arguments[1]);
       }
     });
@@ -826,7 +772,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   }, function (e, t, n) {
     e.exports = !n(3) && !n(4)(function () {
       return 7 != Object.defineProperty(n(15)("div"), "a", {
-        get: function get() {
+        get: function () {
           return 7;
         }
       }).a;
@@ -869,11 +815,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         t[e] = e;
       }), 7 != o({}, e)[n] || Object.keys(o({}, t)).join("") != r;
     }) ? function (e, t) {
-      for (var n = m(e), r = arguments.length, o = 1, i = d.f, u = h.f; o < r;) {
-        for (var l, a = v(arguments[o++]), s = i ? f(a).concat(i(a)) : f(a), c = s.length, p = 0; p < c;) {
-          u.call(a, l = s[p++]) && (n[l] = a[l]);
-        }
-      }
+      for (var n = m(e), r = arguments.length, o = 1, i = d.f, u = h.f; o < r;) for (var l, a = v(arguments[o++]), s = i ? f(a).concat(i(a)) : f(a), c = s.length, p = 0; p < c;) u.call(a, l = s[p++]) && (n[l] = a[l]);
 
       return n;
     } : o;
@@ -889,13 +831,9 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           o = 0,
           i = [];
 
-      for (n in r) {
-        n != s && u(r, n) && i.push(n);
-      }
+      for (n in r) n != s && u(r, n) && i.push(n);
 
-      for (; t.length > o;) {
-        u(r, n = t[o++]) && (~a(i, n) || i.push(n));
-      }
+      for (; t.length > o;) u(r, n = t[o++]) && (~a(i, n) || i.push(n));
 
       return i;
     };
@@ -934,7 +872,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     var r = n(0),
         o = n(32)(2);
     r(r.P + r.F * !n(13)([].filter, !0), "Array", {
-      filter: function filter(e) {
+      filter: function (e) {
         return o(this, e, arguments[1]);
       }
     });
@@ -962,9 +900,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         for (var t = 1; t < arguments.length; t++) {
           var n = arguments[t];
 
-          for (var r in n) {
-            Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
-          }
+          for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
         }
 
         return e;
@@ -1296,7 +1232,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           autoComplete: "off",
           className: "" + M + j + A,
           id: i,
-          onClick: function onClick(e) {
+          onClick: function (e) {
             return o.handleInputClick(e);
           },
           onBlur: this.handleInputBlur
@@ -1308,7 +1244,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           onFocus: this.handleInputFocus,
           name: l,
           placeholder: a,
-          ref: function ref(e) {
+          ref: function (e) {
             o.elementReferences[-1] = e;
           },
           type: "text",
@@ -1317,7 +1253,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           value: w
         })), e, (0, $.createElement)("ul", {
           className: B + " " + F + " " + D,
-          onMouseLeave: function onMouseLeave(e) {
+          onMouseLeave: function (e) {
             return o.handleListMouseLeave(e);
           },
           id: i + "__listbox",
@@ -1333,16 +1269,16 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             },
             id: i + "__option--" + t,
             key: t,
-            onBlur: function onBlur(e) {
+            onBlur: function (e) {
               return o.handleOptionBlur(e, t);
             },
-            onClick: function onClick(e) {
+            onClick: function (e) {
               return o.handleOptionClick(e, t);
             },
-            onMouseEnter: function onMouseEnter(e) {
+            onMouseEnter: function (e) {
               return o.handleOptionMouseEnter(e, t);
             },
-            ref: function ref(e) {
+            ref: function (e) {
               o.elementReferences[t] = e;
             },
             role: "option",
@@ -1362,12 +1298,12 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       minLength: 0,
       name: "input-autocomplete",
       placeholder: "",
-      onConfirm: function onConfirm() {},
+      onConfirm: function () {},
       confirmOnBlur: !0,
       showNoOptionsFound: !0,
       showAllValues: !1,
       required: !1,
-      tNoResults: function tNoResults() {
+      tNoResults: function () {
         return "No results found";
       },
       dropdownArrow: r["default"]
@@ -1377,23 +1313,21 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         i = r(53),
         u = r(28),
         l = r(26)("IE_PROTO"),
-        a = function a() {},
+        a = function () {},
         s = "prototype",
-        _c = function c() {
+        c = function () {
       var e,
           t = r(15)("iframe"),
           n = u.length;
 
-      for (t.style.display = "none", r(54).appendChild(t), t.src = "javascript:", (e = t.contentWindow.document).open(), e.write("<script>document.F=Object<\/script>"), e.close(), _c = e.F; n--;) {
-        delete _c[s][u[n]];
-      }
+      for (t.style.display = "none", r(54).appendChild(t), t.src = "javascript:", (e = t.contentWindow.document).open(), e.write("<script>document.F=Object<\/script>"), e.close(), c = e.F; n--;) delete c[s][u[n]];
 
-      return _c();
+      return c();
     };
 
     e.exports = Object.create || function (e, t) {
       var n;
-      return null !== e ? (a[s] = o(e), n = new a(), a[s] = null, n[l] = e) : n = _c(), t === undefined ? n : i(n, t);
+      return null !== e ? (a[s] = o(e), n = new a(), a[s] = null, n[l] = e) : n = c(), t === undefined ? n : i(n, t);
     };
   }, function (e, t, n) {
     var u = n(8),
@@ -1402,9 +1336,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     e.exports = n(3) ? Object.defineProperties : function (e, t) {
       l(e);
 
-      for (var n, r = a(t), o = r.length, i = 0; i < o;) {
-        u.f(e, n = r[i++], t[n]);
-      }
+      for (var n, r = a(t), o = r.length, i = 0; i < o;) u.f(e, n = r[i++], t[n]);
 
       return e;
     };
@@ -1428,13 +1360,11 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     e.exports = Function.bind || function (t) {
       var n = i(this),
           r = a.call(arguments, 1),
-          o = function o() {
+          o = function () {
         var e = r.concat(a.call(arguments));
         return this instanceof o ? function (e, t, n) {
           if (!(t in s)) {
-            for (var r = [], o = 0; o < t; o++) {
-              r[o] = "a[" + o + "]";
-            }
+            for (var r = [], o = 0; o < t; o++) r[o] = "a[" + o + "]";
 
             s[t] = Function("F,a", "return new F(" + r.join(",") + ")");
           }
@@ -1511,9 +1441,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
     var r = function (o) {
       function e() {
-        for (var e, t = arguments.length, n = new Array(t), r = 0; r < t; r++) {
-          n[r] = arguments[r];
-        }
+        for (var e, t = arguments.length, n = new Array(t), r = 0; r < t; r++) n[r] = arguments[r];
 
         return (e = o.call.apply(o, [this].concat(n)) || this).state = {
           bump: !1
@@ -1568,16 +1496,16 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     }(m.Component);
 
     (t["default"] = r).defaultProps = {
-      tQueryTooShort: function tQueryTooShort(e) {
+      tQueryTooShort: function (e) {
         return "Type in " + e + " or more characters for results.";
       },
-      tNoResults: function tNoResults() {
+      tNoResults: function () {
         return "No search results.";
       },
-      tSelectedOption: function tSelectedOption(e, t, n) {
+      tSelectedOption: function (e, t, n) {
         return e + " (" + (n + 1) + " of " + t + ") is selected.";
       },
-      tResults: function tResults(e, t) {
+      tResults: function (e, t) {
         return e + " " + (1 === e ? "result" : "results") + " " + (1 === e ? "is" : "are") + " available. " + t;
       }
     };
