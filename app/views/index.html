@@ -26,11 +26,29 @@
 <!-- Your page content goes inside the content block -->
 <!-- More info and code for the page layout can be found at https://beta.nhs.uk/service-manual/styles-components-patterns/layout -->
 {% block content %}
-  <div class="nhsuk-grid-row nhsuk-u-margin-top-4">
-    <div class="nhsuk-grid-column-full nhsuk-u-margin-top-4">
+  <div class="nhsuk-grid-row nhsuk-u-margin-top-0">
+    <div class="nhsuk-grid-column-full nhsuk-u-margin-top-0">
+    <h2>Information about this prototype.</h2>
+    <ul>
+      <li>It is for viewing only as a reference</li>
+      <li>The final release may be different to what is viewed here</li>
+      <li>No personal data has been used in this prototype</li>
+      <li>This prototype does not save any data to any services</li>
+      <li>This prototype will store a small bit of data on your machine to pass data from page to page so we recommend using test data</li>
+    </ul>
+    <a class="nhsuk-button" href="v7/login/smartcard">Start</a>
 
-      <h1 class="nhsuk-heading-l">Development Version</h1>
-      <h2><a href="v7">V7</a> - due to be ready ?? March</h2>
+    <h2>GP Admin Quick links</h2>
+    <p><a href="v7/prior-notification/prior-notification-3?role=admin">Prior notification list - GP facing</a></p>
+    <p><a href="v7/non-responder/non-responder?role=admin">Non responder list - GP facing</a></p>
+    <h2>Sample Taker Quick links</h2>
+    <p><a href="v7/patient/hmr101/choose?role=sampleTaker">HMR101 - Sample taker</a></p>
+    <p><a href="v7/patient/patient-summary?role=sampleTaker">Patient Summary - Sample taker</a></p>
+    <h2>CSAS Quick links</h2>
+    <p><a href="v7/patient/patient-summary?role=csas">Patient Summary - CSAS</a></p>
+    <p><a href="v7/patient/add-test-result/add-result?role=csas">Add test result - CSAS</a></p>
+    <p><a href="v7/patient/change-due-date/enter-reason?role=csas">Change due date - CSAS</a></p>
+    <p><a href="v7/worklists/worklists?role=csas">Manual Matching - CSAS</a></p>
 
      
     </div>
