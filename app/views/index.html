@@ -1,0 +1,56 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  NHS.UK prototype kit
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+  {{ hero({
+    "heading": "Screening service",
+    "text": "Cervical / Breast / ..."
+  }) }}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://beta.nhs.uk/service-manual/styles-components-patterns/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row nhsuk-u-margin-top-4">
+    <div class="nhsuk-grid-column-full nhsuk-u-margin-top-4">
+
+      <h1 class="nhsuk-heading-l">Archive ?? to 26th Feb</h1>
+      <h2><a href="v5">V5</a> - tested ?? to 26th Feb</h2>
+
+      <h1 class="nhsuk-heading-l">Latest Version</h1>
+      <h2><a href="v6">V6</a> - currently being tested 26th Feb to ??</h2>
+
+      <h1 class="nhsuk-heading-l">Development Version</h1>
+      <h2><a href="v7">V7</a> - due to be ready ?? March</h2>
+
+      <hr>
+      <h2><a href="errors">Errors</a></h2>
+      <hr>
+      <h2><a href="archive">Archived Versions</a></h2>
+      <hr>
+      <h2><a href="components">Components</a></h2>
+      <hr>
+      <h2>Testing Ground</h2>
+      <a href="testing/keybind-1">Keybind Spike</a><br>
+      <a href="testing/ers-sample-1">eRS patient search</a><br>
+      <a href="testing/ers-sample-2">eRS search results</a><br>
+      <a href="testing/ers-sample-3">eRS attachment added</a><br>
+      <a href="testing/ers-sample-4">eRS worklist</a>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,105 @@
+{% extends "layout-v2-patient.html" %}
+
+{% block pageScripts %}
+  <script type="text/javascript" src="/js/search.js"></script>
+  <script type="text/javascript" src="/js/auto.js"></script>
+  <script type="text/javascript" src="/js/action-menu.js"></script>
+  <script type="text/javascript" src="/js/sort.js"></script>
+{% endblock %}
+{% block pageTitle %}
+  NHS Cervical Screening
+{% endblock %}
+
+{% block header %}
+{{ header({
+    "service": {
+      "name": "Cervical Screening",
+      "longName": "false"
+    },
+    "showNav": "false",
+    "showSearch": "true"
+  })
+}}
+{% endblock %}
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+  {{ backLink({
+    "href": "../patient-summary",
+    "text": "Go back to patient summary"
+  }) }}
+
+
+
+              <form action="/v5/patient/change-due-date/change" method="post" class="form">
+
+                  <fieldset class="nhsuk-fieldset">
+                    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                      <h1 class="nhsuk-fieldset__heading">
+                        Choose a reason to change the next test due  date
+                      </h1>
+                    </legend>
+
+
+                    <div class="nhsuk-form-group">
+
+
+  <label class="nhsuk-label" for="select-1">
+    Choose a reason
+  </label>
+
+  <select class="nhsuk-select" name="reason">
+
+      <optgroup label="Cease">
+        <option value="No cervix">No cervix</option>
+        <option value="Cease - Patient choice">Patient choice</option>
+        <option value="Mental capacity act">Mental capacity act</option>
+          <option value="Receiving radiotherapy">Receiving radiotherapy</option>
+          <option value="Aged over 65">Aged over 65</option>
+          <option value="Cease - Other reason">Other reason</option>
+
+      </optgroup>
+
+
+      <optgroup label="Defer" name="Defer">
+        <option value="Pregnancy">Pregnancy</option>
+        <option value="Defer - Patient choice">Patient choice</option>
+        <option value="Undergoing treatment">Undergoing treatment</option>
+        <option value="Recent test">Recent test</option>
+        <option value="Under care of colposcopy">Under care of colposcopy</option>
+        <option value="Other reason">Other reason</option>
+      </optgroup>
+
+  </select>
+</div>
+
+
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="example">
+                  CRM
+                  </label>
+                <input class="nhsuk-input nhsuk-input--width-10" type="number" name="crm" value="crm">
+              </div>
+
+
+
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="example">
+                    Detail
+                  </label>
+                  <span class="nhsuk-hint" id="example-hint">
+                    Do not include clinical information at  this point.
+                  </span>
+                  <textarea class="nhsuk-textarea" id="example" name="details" rows="5" aria-describedby="example-hint" value="details"></textarea>
+                </div>
+                  <button class="nhsuk-button--ers">Continue</button>
+            </form>
+
+            </div>
+
+
+
+
+{% endblock %}
